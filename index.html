@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Riad | Elite Software Engineer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- English Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Arabic Fonts (Cairo, Tajawal, or IBM Plex Sans Arabic) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Abstract Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow blob-tr"></div>
+    <div class="bg-glow blob-bl"></div>
+
+    <!-- Floating SaaS Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">AR<span class="accent-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-i18n="nav_home">Home</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav_expertise">Expertise</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav_work">Work</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta-wrapper">
+                <button id="langToggle" class="btn btn-nav lang-btn">عربي <i class="fa-solid fa-globe"></i></button>
+                <a href="#" class="btn btn-nav" data-i18n="nav_resume">Resume <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content text-center">
+                    <div class="reveal reveal-up">
+                        <span class="status-badge">
+                            <span class="status-dot"></span>
+                            <span data-i18n="hero_status">Available for new opportunities</span>
+                        </span>
+                    </div>
+                    <h1 class="hero-title reveal reveal-up showcase-delay-1" data-i18n="hero_title">
+                        Building <span class="text-gradient">high-performance</span><br> digital systems.
+                    </h1>
+                    <p class="hero-desc reveal reveal-up showcase-delay-2" data-i18n="hero_desc">
+                        I am Abdullah Riad, a Senior Software Engineer specializing in scalable architectures, modern
+                        full-stack development, and solving complex technical challenges at an enterprise level.
+                    </p>
+                    <div class="hero-actions reveal reveal-up showcase-delay-3">
+                        <a href="#projects" class="btn btn-primary btn-lg" data-i18n="hero_cta_work">
+                            Explore My Work
+                        </a>
+                        <a href="https://github.com/ABDULLAHRIAD3" target="_blank" class="btn btn-glass btn-lg">
+                            <i class="fa-brands fa-github"></i> <span data-i18n="hero_cta_github">GitHub Profile</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual-wrapper reveal reveal-up showcase-delay-4">
+                    <div class="hero-code-editor glass-panel-strong">
+                        <div class="editor-header">
+                            <div class="editor-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="editor-title">engineer.ts</div>
+                        </div>
+                        <div class="editor-body" dir="ltr"> <!-- Force code blocks to always be LTR -->
+                            <pre><code><span class="keyword">import</span> { <span class="variable">System</span>, <span class="variable">Architecture</span> } <span class="keyword">from</span> <span class="string">'@enterprise/core'</span>;
+
+<span class="keyword">class</span> <span class="variable">SoftwareEngineer</span> {
+  <span class="keyword">private</span> <span class="property">focus</span> = [<span class="string">'Scalability'</span>, <span class="string">'Performance'</span>, <span class="string">'Clean Code'</span>];
+  
+  <span class="keyword">public</span> <span class="keyword">async</span> <span class="method">buildSolution</span>(<span class="param">problem</span>: <span class="variable">ComplexIssue</span>): <span class="variable">Promise&lt;System&gt;</span> {
+    <span class="keyword">const</span> <span class="variable">architecture</span> = <span class="keyword">await</span> <span class="variable">Architecture</span>.<span class="method">design</span>({
+      <span class="property">resilient</span>: <span class="keyword">true</span>,
+      <span class="property">distributed</span>: <span class="keyword">true</span>
+    });
+    
+    <span class="keyword">return</span> <span class="variable">architecture</span>.<span class="method">deploy</span>(<span class="keyword">this</span>.<span class="property">focus</span>);
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Logos / Technologies Strip (SaaS Style) -->
+        <div class="tech-strip" dir="ltr"> <!-- Technical track LTR -->
+            <div class="tech-track">
+                <span>TypeScript</span> <span class="dot-separator">•</span>
+                <span>React</span> <span class="dot-separator">•</span>
+                <span>Next.js</span> <span class="dot-separator">•</span>
+                <span>Node.js</span> <span class="dot-separator">•</span>
+                <span>Go</span> <span class="dot-separator">•</span>
+                <span>PostgreSQL</span> <span class="dot-separator">•</span>
+                <span>AWS</span> <span class="dot-separator">•</span>
+                <span>Docker</span> <span class="dot-separator">•</span>
+                <span>Kubernetes</span> <span class="dot-separator">•</span>
+                <!-- Duplicate for infinite scroll -->
+                <span>TypeScript</span> <span class="dot-separator">•</span>
+                <span>React</span> <span class="dot-separator">•</span>
+                <span>Next.js</span> <span class="dot-separator">•</span>
+                <span>Node.js</span> <span class="dot-separator">•</span>
+                <span>Go</span> <span class="dot-separator">•</span>
+                <span>PostgreSQL</span> <span class="dot-separator">•</span>
+                <span>AWS</span> <span class="dot-separator">•</span>
+                <span>Docker</span> <span class="dot-separator">•</span>
+                <span>Kubernetes</span> <span class="dot-separator">•</span>
+            </div>
+        </div>
+
+        <!-- Skills / Expertise (Bento Grid) -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header text-center reveal reveal-up">
+                    <h2 class="section-title" data-i18n="skills_title">Technical <span
+                            class="text-gradient">Expertise</span></h2>
+                    <p class="section-subtitle" data-i18n="skills_subtitle">A comprehensive toolkit for modern software
+                        engineering.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Frontend -->
+                    <div class="bento-item glass-card reveal reveal-up col-span-2">
+                        <div class="bento-content">
+                            <div class="bento-icon"><i class="fa-solid fa-layer-group"></i></div>
+                            <h3 data-i18n="bento_frontend_title">Web Applications</h3>
+                            <p data-i18n="bento_frontend_desc">Building highly interactive, accessible, and performant
+                                user interfaces using modern frameworks and standard web APIs.</p>
+                            <div class="tech-pills" dir="ltr">
+                                <span class="pill">React</span>
+                                <span class="pill">Next.js</span>
+                                <span class="pill">TypeScript</span>
+                                <span class="pill">Vanilla JS</span>
+                                <span class="pill">CSS Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="bento-item glass-card reveal reveal-up row-span-2 showcase-delay-1">
+                        <div class="bento-content">
+                            <div class="bento-icon"><i class="fa-solid fa-server"></i></div>
+                            <h3 data-i18n="bento_backend_title">AI Developer</h3>
+                            <p data-i18n="bento_backend_desc">Designing robust APIs, microservices, and monolithic
+                                backends optimized for scale and speed.</p>
+                            <div class="tech-pills vertical" dir="ltr">
+                                <span class="pill"><i class="fa-brands fa-node-js"></i> Node.js & Express</span>
+                                <span class="pill"><i class="fa-brands fa-golang"></i> Go (Golang)</span>
+                                <span class="pill"><i class="fa-brands fa-python"></i> Python / Django</span>
+                                <span class="pill"><i class="fa-solid fa-code-branch"></i> GraphQL & REST</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="bento-item glass-card reveal reveal-up showcase-delay-2">
+                        <div class="bento-content">
+                            <div class="bento-icon"><i class="fa-solid fa-database"></i></div>
+                            <h3 data-i18n="bento_data_title">Automation Tools</h3>
+                            <p data-i18n="bento_data_desc">Structuring relational and NoSQL databases for
+                                high-availability.</p>
+                            <div class="tech-pills" dir="ltr">
+                                <span class="pill">PostgreSQL</span>
+                                <span class="pill">MongoDB</span>
+                                <span class="pill">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DevOps -->
+                    <div class="bento-item glass-card reveal reveal-up showcase-delay-3">
+                        <div class="bento-content">
+                            <div class="bento-icon"><i class="fa-solid fa-cloud"></i></div>
+                            <h3 data-i18n="bento_cloud_title">Cloud & DevOps</h3>
+                            <p data-i18n="bento_cloud_desc">Automating deployments, CI/CD pipelines, and infrastructure
+                                management.</p>
+                            <div class="tech-pills" dir="ltr">
+                                <span class="pill">AWS</span>
+                                <span class="pill">Docker</span>
+                                <span class="pill">Git Actions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects (SaaS Style Immersive Cards) -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header reveal reveal-up">
+                    <h2 class="section-title" data-i18n="projects_title">Featured <span
+                            class="text-gradient">Projects</span></h2>
+                    <p class="section-subtitle" data-i18n="projects_subtitle">Selected works that showcase architectural
+                        design and technical problem-solving.</p>
+                </div>
+
+                <div class="projects-showcase">
+                    <!-- Project 1 -->
+                    <div class="project-feature-card glass-card reveal reveal-up">
+                        <div class="project-info">
+                            <div class="project-badge" data-i18n="proj1_badge">Enterprise Analytics</div>
+                            <h3 class="project-name" data-i18n="proj1_name">Nexus Data Platform</h3>
+                            <p class="project-description" data-i18n="proj1_desc">
+                                A high-throughput real-time analytics dashboard capable of ingesting and visualizing
+                                millions of data points per minute. Built with performance and memory optimization at
+                                its core.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric"><strong dir="ltr">40%</strong> <span
+                                        data-i18n="proj1_metric1">Faster Queries</span></div>
+                                <div class="metric"><strong dir="ltr">100k+</strong> <span
+                                        data-i18n="proj1_metric2">Events/sec</span></div>
+                            </div>
+                            <div class="project-tech-list" dir="ltr">
+                                <span>React</span> • <span>Node.js</span> • <span>ClickHouse</span> • <span>Redis</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary"><span data-i18n="proj_demo">Live Demo</span> <i
+                                        class="fa-solid fa-arrow-right-long project-arrow"></i></a>
+                                <a href="https://github.com/ABDULLAHRIAD3" class="btn btn-glass"><i
+                                        class="fa-brands fa-github"></i> <span data-i18n="proj_source">Source
+                                        Code</span></a>
+                            </div>
+                        </div>
+                        <div class="project-visual bg-gradient-cyan" dir="ltr">
+                            <div class="browser-mockup">
+                                <div class="browser-header"><span></span><span></span><span></span></div>
+                                <div class="browser-body">
+                                    <div class="mockup-chart">
+                                        <div class="bar h-60"></div>
+                                        <div class="bar h-90"></div>
+                                        <div class="bar h-40"></div>
+                                        <div class="bar h-100"></div>
+                                        <div class="bar h-70"></div>
+                                        <div class="bar h-85"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 (Reverse Layout) -->
+                    <div class="project-feature-card glass-card reverse reveal reveal-up">
+                        <div class="project-info">
+                            <div class="project-badge" data-i18n="proj2_badge">Security Infrastructure</div>
+                            <h3 class="project-name" data-i18n="proj2_name">AuthGuard Microservice</h3>
+                            <p class="project-description" data-i18n="proj2_desc">
+                                A zero-trust authentication gateway serving multiple frontends. It handles OAuth2 flows,
+                                MFA, and intelligent rate limiting using a custom token validation strategy.
+                            </p>
+                            <div class="project-tech-list" dir="ltr">
+                                <span>Go (Golang)</span> • <span>PostgreSQL</span> • <span>gRPC</span> •
+                                <span>Docker</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-glass"><i class="fa-brands fa-github"></i> <span
+                                        data-i18n="proj2_source">View Architecture</span></a>
+                            </div>
+                        </div>
+                        <div class="project-visual bg-gradient-purple" dir="ltr">
+                            <div class="terminal-mockup">
+                                <div class="terminal-header">authguard-server</div>
+                                <div class="terminal-body">
+                                    <p><span class="text-green">✔</span> Loaded configuration from .env</p>
+                                    <p><span class="text-green">✔</span> Connected to PostgreSQL cluster</p>
+                                    <p><span class="text-green">✔</span> Redis cache initialized</p>
+                                    <p class="text-blue">ⓘ Server listening on port 50051 (gRPC)</p>
+                                    <p class="text-yellow">⚠ Rate limit anomaly detected from IP 192.168.1.1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Process -->
+        <section id="experience" class="experience section">
+            <div class="container dual-col-layout">
+                <!-- Experience Timeline -->
+                <div class="experience-col reveal reveal-up">
+                    <h2 class="section-title text-sm" data-i18n="exp_title">Professional Journey</h2>
+
+                    <div class="elite-timeline">
+                        <div class="time-item">
+                            <div class="time-marker"></div>
+                            <div class="time-content glass-card">
+                                <div class="time-header">
+                                    <div>
+                                        <h3 data-i18n="exp1_role">Senior Software Engineer</h3>
+                                        <h4 data-i18n="exp1_company">TechNova Systems</h4>
+                                    </div>
+                                    <span class="date-badge" dir="ltr">2022 - Present</span>
+                                </div>
+                                <p data-i18n="exp1_desc">Led the migration from a monolithic legacy system to a highly
+                                    available microservices architecture. Improved CI/CD pipelines reducing deployment
+                                    time by 60%.</p>
+                            </div>
+                        </div>
+
+                        <div class="time-item">
+                            <div class="time-marker"></div>
+                            <div class="time-content glass-card">
+                                <div class="time-header">
+                                    <div>
+                                        <h3 data-i18n="exp2_role">Full Stack Engineer</h3>
+                                        <h4 data-i18n="exp2_company">Global Digital Innovations</h4>
+                                    </div>
+                                    <span class="date-badge" dir="ltr">2019 - 2022</span>
+                                </div>
+                                <p data-i18n="exp2_desc">Developed core application features using React and Node.js.
+                                    Architected scalable database schemas and integrated third-party payment APIs
+                                    processing $2M+ monthly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process -->
+                <div class="process-col reveal reveal-up showcase-delay-1">
+                    <h2 class="section-title text-sm" data-i18n="phil_title">Engineering Philosophy</h2>
+
+                    <div class="philosophy-items">
+                        <div class="phil-item">
+                            <div class="phil-icon"><i class="fa-solid fa-compress"></i></div>
+                            <div class="phil-text">
+                                <h4 data-i18n="phil1_title">Simplicity over Complexity</h4>
+                                <p data-i18n="phil1_desc">Code is read more often than it is written. I prioritize
+                                    clear, maintainable logic over clever but obscure one-liners.</p>
+                            </div>
+                        </div>
+                        <div class="phil-item">
+                            <div class="phil-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="phil-text">
+                                <h4 data-i18n="phil2_title">Fail-Safe by Design</h4>
+                                <p data-i18n="phil2_desc">Anticipating failure is key. I implement robust error
+                                    handling, circuit breakers, and comprehensive testing.</p>
+                            </div>
+                        </div>
+                        <div class="phil-item">
+                            <div class="phil-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                            <div class="phil-text">
+                                <h4 data-i18n="phil3_title">Performance matters</h4>
+                                <p data-i18n="phil3_desc">Every millisecond counts. Profiling, optimizing queries, and
+                                    strategic caching are always in my workflow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-cta-card glass-panel-strong reveal reveal-up">
+                    <div class="contact-cta-content">
+                        <h2 data-i18n="contact_title">Ready to scale your next project?</h2>
+                        <p data-i18n="contact_desc">I'm currently evaluating new opportunities. Let's discuss how my
+                            expertise can align with your engineering goals.</p>
+                        <a href="mailto:abdullah22riad@gmail.com" class="btn btn-primary btn-lg"
+                            dir="ltr">abdullah22riad@gmail.com</a>
+                    </div>
+                    <div class="contact-cta-links">
+                        <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i> <span
+                                data-i18n="contact_linkedin">LinkedIn</span></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-github"></i> <span
+                                data-i18n="contact_github">GitHub</span></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i> <span
+                                data-i18n="contact_twitter">X (Twitter)</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="elite-footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">AR<span class="accent-dot">.</span></div>
+            <p class="copyright">&copy; <span id="currentYear"></span> Abdullah Riad. <span
+                    data-i18n="footer_credits">Engineered with precision.</span></p>
+            <div class="footer-status">
+                <span class="status-dot"></span> <span data-i18n="footer_status">All systems operational</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top button -->
+    <button id="scrollTopBtn" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>
