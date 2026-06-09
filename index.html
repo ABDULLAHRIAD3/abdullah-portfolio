@@ -5,9 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdullah Riad | Elite Software Engineer</title>
+    <meta name="description" content="Portfolio of Abdullah Riad, Senior Software Engineer specializing in scalable architectures, modern full-stack development, and solving complex technical challenges.">
+    <meta name="keywords" content="Software Engineer, Full Stack, React, Node.js, Python, AI, Go">
+    <meta property="og:title" content="Abdullah Riad | Elite Software Engineer">
+    <meta property="og:description" content="Portfolio of Abdullah Riad, specializing in scalable architectures and modern full-stack development.">
+    <meta property="og:type" content="website">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" as="style">
 
     <!-- English Fonts -->
     <link
@@ -226,77 +235,101 @@
                 </div>
 
                 <div class="projects-showcase">
-                    <!-- Project 1 -->
+                    <!-- Project 1: AI Learning Coach -->
                     <div class="project-feature-card glass-card reveal reveal-up">
                         <div class="project-info">
-                            <div class="project-badge" data-i18n="proj1_badge">Enterprise Analytics</div>
-                            <h3 class="project-name" data-i18n="proj1_name">Nexus Data Platform</h3>
+                            <div class="project-badge" data-i18n="proj1_badge">AI Learning Platform</div>
+                            <h3 class="project-name" data-i18n="proj1_name">Personal AI Learning Coach</h3>
                             <p class="project-description" data-i18n="proj1_desc">
-                                A high-throughput real-time analytics dashboard capable of ingesting and visualizing
-                                millions of data points per minute. Built with performance and memory optimization at
-                                its core.
+                                An AI-powered learning platform that transforms PDFs and study materials into an adaptive learning experience using RAG, AI tutoring, mastery tracking, and personalized recommendations.
                             </p>
-                            <div class="project-metrics">
-                                <div class="metric"><strong dir="ltr">40%</strong> <span
-                                        data-i18n="proj1_metric1">Faster Queries</span></div>
-                                <div class="metric"><strong dir="ltr">100k+</strong> <span
-                                        data-i18n="proj1_metric2">Events/sec</span></div>
-                            </div>
                             <div class="project-tech-list" dir="ltr">
-                                <span>React</span> • <span>Node.js</span> • <span>ClickHouse</span> • <span>Redis</span>
+                                <span>Next.js</span> • <span>TypeScript</span> • <span>PostgreSQL</span> • <span>Gemini</span> • <span>RAG</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-primary"><span data-i18n="proj_demo">Live Demo</span> <i
-                                        class="fa-solid fa-arrow-right-long project-arrow"></i></a>
-                                <a href="https://github.com/ABDULLAHRIAD3" class="btn btn-glass"><i
-                                        class="fa-brands fa-github"></i> <span data-i18n="proj_source">Source
-                                        Code</span></a>
+                                <a href="project-ai-coach.html" class="btn btn-primary"><span data-i18n="proj_details">View Details</span> <i class="fa-solid fa-arrow-right-long project-arrow"></i></a>
+                                <a href="https://ai-learn-coach.vercel.app" target="_blank" class="btn btn-glass"><i class="fa-solid fa-link"></i> <span data-i18n="proj_demo">Live Demo</span></a>
                             </div>
                         </div>
                         <div class="project-visual bg-gradient-cyan" dir="ltr">
                             <div class="browser-mockup">
                                 <div class="browser-header"><span></span><span></span><span></span></div>
                                 <div class="browser-body">
-                                    <div class="mockup-chart">
-                                        <div class="bar h-60"></div>
-                                        <div class="bar h-90"></div>
-                                        <div class="bar h-40"></div>
-                                        <div class="bar h-100"></div>
-                                        <div class="bar h-70"></div>
-                                        <div class="bar h-85"></div>
+                                    <div class="mockup-ui">
+                                        <div class="ui-header"></div>
+                                        <div class="ui-content">
+                                            <div class="ui-sidebar"></div>
+                                            <div class="ui-main">
+                                                <div class="ui-card"></div>
+                                                <div class="ui-card"></div>
+                                                <div class="ui-card"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2 (Reverse Layout) -->
+                    <!-- Project 2: Smart Desktop File Organizer (Reverse Layout) -->
                     <div class="project-feature-card glass-card reverse reveal reveal-up">
                         <div class="project-info">
-                            <div class="project-badge" data-i18n="proj2_badge">Security Infrastructure</div>
-                            <h3 class="project-name" data-i18n="proj2_name">AuthGuard Microservice</h3>
+                            <div class="project-badge" data-i18n="proj2_badge">Python Automation</div>
+                            <h3 class="project-name" data-i18n="proj2_name">Smart Desktop File Organizer</h3>
                             <p class="project-description" data-i18n="proj2_desc">
-                                A zero-trust authentication gateway serving multiple frontends. It handles OAuth2 flows,
-                                MFA, and intelligent rate limiting using a custom token validation strategy.
+                                A Python automation tool with CLI and GUI interfaces that automatically organizes messy folders based on file type or modification date while preventing accidental overwrites.
                             </p>
                             <div class="project-tech-list" dir="ltr">
-                                <span>Go (Golang)</span> • <span>PostgreSQL</span> • <span>gRPC</span> •
-                                <span>Docker</span>
+                                <span>Python</span> • <span>Tkinter</span> • <span>CLI</span> • <span>GUI</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-glass"><i class="fa-brands fa-github"></i> <span
-                                        data-i18n="proj2_source">View Architecture</span></a>
+                                <a href="project-file-organizer.html" class="btn btn-primary"><span data-i18n="proj_details">View Details</span> <i class="fa-solid fa-arrow-right-long project-arrow"></i></a>
+                                <a href="https://github.com/ABDULLAHRIAD3/clean-folders" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> <span data-i18n="proj_source">Source Code</span></a>
                             </div>
                         </div>
                         <div class="project-visual bg-gradient-purple" dir="ltr">
                             <div class="terminal-mockup">
-                                <div class="terminal-header">authguard-server</div>
+                                <div class="terminal-header">clean-folders</div>
                                 <div class="terminal-body">
-                                    <p><span class="text-green">✔</span> Loaded configuration from .env</p>
-                                    <p><span class="text-green">✔</span> Connected to PostgreSQL cluster</p>
-                                    <p><span class="text-green">✔</span> Redis cache initialized</p>
-                                    <p class="text-blue">ⓘ Server listening on port 50051 (gRPC)</p>
-                                    <p class="text-yellow">⚠ Rate limit anomaly detected from IP 192.168.1.1</p>
+                                    <p><span class="text-green">✔</span> Scanning ~/Downloads...</p>
+                                    <p><span class="text-green">✔</span> Found 142 files to organize</p>
+                                    <p class="text-blue">ⓘ Categorizing by file type</p>
+                                    <p><span class="text-green">✔</span> Moved 50 images to /Images</p>
+                                    <p><span class="text-green">✔</span> Moved 42 documents to /Docs</p>
+                                    <p class="text-yellow">⚠ Dry-run complete. No files were actually moved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Financial Customer Analysis Dashboard -->
+                    <div class="project-feature-card glass-card reveal reveal-up">
+                        <div class="project-info">
+                            <div class="project-badge" data-i18n="proj3_badge">Data Visualization</div>
+                            <h3 class="project-name" data-i18n="proj3_name">Financial Analysis Dashboard</h3>
+                            <p class="project-description" data-i18n="proj3_desc">
+                                An interactive financial analytics dashboard that processes Arabic financial datasets and provides KPIs, risk segmentation, debt analysis, and Excel exports.
+                            </p>
+                            <div class="project-tech-list" dir="ltr">
+                                <span>Python</span> • <span>Dash</span> • <span>Plotly</span> • <span>Pandas</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="project-financial-dashboard.html" class="btn btn-primary"><span data-i18n="proj_details">View Details</span> <i class="fa-solid fa-arrow-right-long project-arrow"></i></a>
+                                <a href="https://github.com/ABDULLAHRIAD3/sales-analytics-dashboard" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> <span data-i18n="proj_source">Source Code</span></a>
+                            </div>
+                        </div>
+                        <div class="project-visual bg-gradient-orange" dir="ltr">
+                            <div class="browser-mockup">
+                                <div class="browser-header"><span></span><span></span><span></span></div>
+                                <div class="browser-body">
+                                    <div class="mockup-chart">
+                                        <div class="bar h-85 bg-orange"></div>
+                                        <div class="bar h-60 bg-orange"></div>
+                                        <div class="bar h-100 bg-orange"></div>
+                                        <div class="bar h-40 bg-orange"></div>
+                                        <div class="bar h-70 bg-orange"></div>
+                                        <div class="bar h-90 bg-orange"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -420,7 +453,7 @@
     <!-- Scroll to Top button -->
     <button id="scrollTopBtn" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=2" defer></script>
 </body>
 
 </html>

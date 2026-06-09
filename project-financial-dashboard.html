@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis Dashboard | Abdullah Riad</title>
+    <meta name="description" content="Financial Analysis Dashboard project by Abdullah Riad. An interactive financial analytics dashboard processing Arabic datasets.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Abstract Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow blob-tr"></div>
+    <div class="bg-glow blob-bl"></div>
+
+    <!-- Floating Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="logo">AR<span class="accent-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="index.html#projects" class="nav-link active" data-i18n="nav_work">Work</a></li>
+            </ul>
+            <div class="nav-cta-wrapper">
+                <button id="langToggle" class="btn btn-nav lang-btn">عربي <i class="fa-solid fa-globe"></i></button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Project Hero -->
+        <section class="section project-detail-hero">
+            <div class="container text-center reveal reveal-up">
+                <div class="project-badge mb-4" data-i18n="proj3_badge" style="display: inline-block;">Data Visualization</div>
+                <h1 class="hero-title" data-i18n="proj3_name">Financial Analysis Dashboard</h1>
+                <p class="hero-desc" data-i18n="proj3_desc_full">
+                    An interactive financial analytics dashboard that processes Arabic financial datasets and provides KPIs, risk segmentation, debt analysis, and Excel exports.
+                </p>
+                <div class="project-links mt-4" style="justify-content: center;">
+                    <a href="https://github.com/ABDULLAHRIAD3/sales-analytics-dashboard" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_source">Source Code</span></a>
+                </div>
+
+                <!-- Premium SaaS Showcase -->
+                <div class="saas-showcase-wrapper" data-project="financial-dashboard"></div>
+            </div>
+        </section>
+
+        <!-- Project Content -->
+        <section class="section pt-0">
+            <div class="container dual-col-layout">
+                <div class="reveal reveal-up">
+                    <h2 class="section-title text-sm" data-i18n="proj_overview">Overview & Architecture</h2>
+                    <p class="project-description" data-i18n="proj3_overview_desc">
+                        This analytical tool is designed to process and visualize complex financial data seamlessly. Built using Python's Dash and Plotly frameworks, it effectively handles large CSV datasets, specifically catering to Arabic data encodings. It turns raw tabular data into actionable business intelligence through highly interactive dashboards and KPI summaries.
+                    </p>
+                    
+                    <h2 class="section-title text-sm mt-4" data-i18n="proj_features">Key Features</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-chart-pie text-green"></i> <span data-i18n="proj3_feat1">Interactive KPI Dashboards and Data Visualizations</span></li>
+                        <li><i class="fa-solid fa-language text-green"></i> <span data-i18n="proj3_feat2">Seamless processing of Arabic CSV datasets</span></li>
+                        <li><i class="fa-solid fa-chart-simple text-green"></i> <span data-i18n="proj3_feat3">Risk segmentation and detailed debt analysis</span></li>
+                        <li><i class="fa-solid fa-file-excel text-green"></i> <span data-i18n="proj3_feat4">Automated Excel report generation</span></li>
+                    </ul>
+                </div>
+                
+                <div class="reveal reveal-up showcase-delay-1">
+                    <h2 class="section-title text-sm" data-i18n="proj_stack">Technology Stack</h2>
+                    <div class="tech-pills vertical" dir="ltr">
+                        <span class="pill"><i class="fa-brands fa-python"></i> Python 3</span>
+                        <span class="pill"><i class="fa-solid fa-chart-column"></i> Dash & Plotly</span>
+                        <span class="pill"><i class="fa-solid fa-table"></i> Pandas</span>
+                        <span class="pill"><i class="fa-solid fa-file-csv"></i> OpenPyXL</span>
+                        <span class="pill"><i class="fa-solid fa-calculator"></i> NumPy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="elite-footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">AR<span class="accent-dot">.</span></div>
+            <p class="copyright">&copy; <span id="currentYear"></span> Abdullah Riad. <span data-i18n="footer_credits">Engineered with precision.</span></p>
+            <div class="footer-status">
+                <span class="status-dot"></span> <span data-i18n="footer_status">All systems operational</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top button -->
+    <button id="scrollTopBtn" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="script.js?v=2" defer></script>
+</body>
+</html>

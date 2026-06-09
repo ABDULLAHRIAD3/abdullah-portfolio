@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Desktop File Organizer | Abdullah Riad</title>
+    <meta name="description" content="Smart Desktop File Organizer project by Abdullah Riad. A Python automation tool with CLI and GUI interfaces.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Abstract Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow blob-tr"></div>
+    <div class="bg-glow blob-bl"></div>
+
+    <!-- Floating Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="logo">AR<span class="accent-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="index.html#projects" class="nav-link active" data-i18n="nav_work">Work</a></li>
+            </ul>
+            <div class="nav-cta-wrapper">
+                <button id="langToggle" class="btn btn-nav lang-btn">عربي <i class="fa-solid fa-globe"></i></button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Project Hero -->
+        <section class="section project-detail-hero">
+            <div class="container text-center reveal reveal-up">
+                <div class="project-badge mb-4" data-i18n="proj2_badge" style="display: inline-block;">Python Automation</div>
+                <h1 class="hero-title" data-i18n="proj2_name">Smart Desktop File Organizer</h1>
+                <p class="hero-desc" data-i18n="proj2_desc_full">
+                    A Python automation tool with CLI and GUI interfaces that automatically organizes messy folders based on file type or modification date while preventing accidental overwrites.
+                </p>
+                <div class="project-links mt-4" style="justify-content: center;">
+                    <a href="https://github.com/ABDULLAHRIAD3/clean-folders" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> <span data-i18n="proj_source">Source Code</span></a>
+                </div>
+
+                <!-- Premium SaaS Showcase -->
+                <div class="saas-showcase-wrapper" data-project="file-organizer"></div>
+            </div>
+        </section>
+
+        <!-- Project Content -->
+        <section class="section pt-0">
+            <div class="container dual-col-layout">
+                <div class="reveal reveal-up">
+                    <h2 class="section-title text-sm" data-i18n="proj_overview">Overview & Architecture</h2>
+                    <p class="project-description" data-i18n="proj2_overview_desc">
+                        Dealing with cluttered download folders and desktops is a universal problem. This tool automates the tedious process of categorizing and moving files. It features two user interfaces: a robust Command Line Interface (CLI) for power users and automation scripts, and a graphical interface (GUI) built with Tkinter for everyday use.
+                    </p>
+                    
+                    <h2 class="section-title text-sm mt-4" data-i18n="proj_features">Key Features</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-folder-tree text-green"></i> <span data-i18n="proj2_feat1">Intelligent file categorization by extension and type</span></li>
+                        <li><i class="fa-solid fa-calendar-days text-green"></i> <span data-i18n="proj2_feat2">Date-based organization modes</span></li>
+                        <li><i class="fa-solid fa-shield-halved text-green"></i> <span data-i18n="proj2_feat3">Duplicate protection and safe file handling</span></li>
+                        <li><i class="fa-solid fa-vial text-green"></i> <span data-i18n="proj2_feat4">Dry-run mode for testing and detailed logging</span></li>
+                    </ul>
+                </div>
+                
+                <div class="reveal reveal-up showcase-delay-1">
+                    <h2 class="section-title text-sm" data-i18n="proj_stack">Technology Stack</h2>
+                    <div class="tech-pills vertical" dir="ltr">
+                        <span class="pill"><i class="fa-brands fa-python"></i> Python 3</span>
+                        <span class="pill"><i class="fa-solid fa-window-maximize"></i> Tkinter (GUI)</span>
+                        <span class="pill"><i class="fa-solid fa-terminal"></i> Argparse (CLI)</span>
+                        <span class="pill"><i class="fa-solid fa-file-lines"></i> Logging Module</span>
+                        <span class="pill"><i class="fa-solid fa-folder"></i> OS / Shutil Modules</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="elite-footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">AR<span class="accent-dot">.</span></div>
+            <p class="copyright">&copy; <span id="currentYear"></span> Abdullah Riad. <span data-i18n="footer_credits">Engineered with precision.</span></p>
+            <div class="footer-status">
+                <span class="status-dot"></span> <span data-i18n="footer_status">All systems operational</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top button -->
+    <button id="scrollTopBtn" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="script.js?v=2" defer></script>
+</body>
+</html>
