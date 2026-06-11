@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Analysis Dashboard | Abdullah Riad</title>
-    <meta name="description" content="Financial Analysis Dashboard project by Abdullah Riad. An interactive financial analytics dashboard processing Arabic datasets.">
+    <meta name="description" content="Financial Analysis Dashboard — An interactive analytics dashboard processing Arabic financial datasets with KPIs, risk segmentation, and Excel exports. Built by Abdullah Riad.">
+    <meta property="og:title" content="Financial Analysis Dashboard | Abdullah Riad">
+    <meta property="og:description" content="An interactive financial analytics dashboard that processes Arabic financial datasets and provides KPIs, risk segmentation, debt analysis, and Excel exports.">
+    <meta property="og:type" content="website">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,14 +34,33 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html#home" class="logo">AR<span class="accent-dot">.</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html#home" class="nav-link" data-i18n="nav_home">Home</a></li>
-                <li><a href="index.html#projects" class="nav-link active" data-i18n="nav_work">Work</a></li>
-            </ul>
-            <div class="nav-cta-wrapper">
-                <button id="langToggle" class="btn btn-nav lang-btn">عربي <i class="fa-solid fa-globe"></i></button>
+            
+            <div class="nav-overlay" id="navOverlay"></div>
+            
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-menu-header">
+                    <span class="logo">AR<span class="accent-dot">.</span></span>
+                    <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+                    <li><a href="index.html#projects" class="nav-link active" data-i18n="nav_work">Work</a></li>
+                </ul>
+                
+                <div class="nav-menu-footer">
+                    <a href="index.html" class="btn btn-nav btn-resume" data-i18n="nav_resume">Resume <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="nav-social">
+                        <a href="https://github.com/abdullah-riad" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/abdullah-riad" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:contact@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="hamburger">
+
+            <button id="langToggle" class="btn btn-nav lang-btn">عربي <i class="fa-solid fa-globe"></i></button>
+            
+            <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>

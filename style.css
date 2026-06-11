@@ -65,6 +65,7 @@ html[dir="rtl"] .project-feature-card {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  overflow-x: hidden;
 }
 
 body {
@@ -126,6 +127,8 @@ ul {
 /* Layout Classes */
 .container {
   max-width: var(--max-width);
+  width: 100%;
+  min-width: 0;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -341,20 +344,47 @@ html[dir="rtl"] .project-arrow {
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .logo {
   font-size: 1.2rem;
   font-weight: 800;
   letter-spacing: -1px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .logo {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.nav-menu {
+  display: contents;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
+  order: 1;
+  margin-right: 1rem;
+}
+
+#langToggle {
+  order: 2;
+}
+
+.nav-menu-footer {
+  display: flex;
+  order: 3;
+}
+
+.nav-menu-header,
+.nav-overlay,
+.nav-social {
+  display: none;
 }
 
 .nav-link {
@@ -407,6 +437,7 @@ html[dir="rtl"] .project-arrow {
   display: flex;
   align-items: center;
   padding-top: 120px;
+  overflow: hidden;
   /* Offset for nav */
 }
 
@@ -417,10 +448,11 @@ html[dir="rtl"] .project-arrow {
   justify-content: center;
   padding-top: 150px;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 .project-detail-hero .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(1.6rem, 5vw, 4rem);
   margin-bottom: 1.5rem;
 }
 
@@ -429,6 +461,8 @@ html[dir="rtl"] .project-arrow {
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+  min-width: 0;
+  width: 100%;
 }
 
 .status-badge {
@@ -444,6 +478,9 @@ html[dir="rtl"] .project-arrow {
   font-family: var(--font-mono);
   font-weight: 500;
   margin-bottom: 2rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 html[dir="rtl"] .status-badge {
@@ -477,25 +514,29 @@ html[dir="rtl"] .status-badge {
 }
 
 .hero-title {
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(2rem, 6vw, 5.5rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .hero-desc {
   font-size: clamp(1.1rem, 2vw, 1.25rem);
   max-width: 650px;
   margin: 0 auto 3rem auto;
+  overflow-wrap: break-word;
 }
 
 .hero-actions {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 html[dir="rtl"] .hero-actions {
@@ -859,6 +900,7 @@ html[dir="rtl"] .project-badge {
   display: flex;
   gap: 1rem;
   margin-top: auto;
+  flex-wrap: wrap;
 }
 
 html[dir="rtl"] .project-links {
@@ -912,7 +954,7 @@ html[dir="rtl"] .project-feature-card.reverse .project-visual {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  transform: perspectiva(1000px) rotateY(-5deg) rotateX(5deg);
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
   transition: transform 0.5s ease;
 }
 
@@ -1344,6 +1386,10 @@ html[dir="rtl"] .scroll-top {
 }
 
 /* Premium SaaS Showcase */
+.saas-showcase-wrapper {
+  overflow: hidden;
+}
+
 .saas-showcase {
   position: relative;
   width: 100%;
@@ -1497,8 +1543,38 @@ html[dir="rtl"] .scroll-top {
   transform: scale(1.02) translateY(0);
 }
 
-/* Responsive */
+/* =========================================
+   RESPONSIVE DESIGN
+   Mobile-first breakpoints:
+   - Base (≤480px): Small phones (320-414px)
+   - 481-768px: Large phones / small tablets
+   - 769-1024px: Tablets
+   - 1025-1279px: Small laptops (default desktop)
+   - 1280-1440px: Large desktop
+   - 1441px+: Ultrawide
+   ========================================= */
 
+/* ---- Ultrawide (1441px+) ---- */
+@media screen and (min-width: 1441px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .section {
+    padding: 140px 0;
+  }
+
+  .hero {
+    padding-top: 140px;
+  }
+
+  .saas-showcase {
+    max-width: 1100px;
+  }
+}
+
+/* ---- Tablet (max-width: 1024px) ---- */
+@media screen and (max-width: 1024px) {
   .bento-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1553,60 +1629,521 @@ html[dir="rtl"] .scroll-top {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .project-info {
+    padding: 2.5rem;
+  }
+
+  .contact-cta-card {
+    padding: 3rem 2rem;
+  }
+
+  .contact-cta-content h2 {
+    font-size: 2rem;
+  }
 }
 
+/* ---- Mobile (max-width: 768px) ---- */
 @media screen and (max-width: 768px) {
+  /* Navigation */
+  /* Mobile Navigation Drawer */
   .hamburger {
     display: flex;
+    z-index: 1003; /* Above drawer */
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-menu.active ~ .hamburger {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    max-width: 85vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.85); /* Dark transparent */
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: -20px 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 1002;
+    padding: 2.5rem 2rem;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.4s;
+  }
+
+  html[dir="rtl"] .nav-menu {
+    right: auto;
+    left: 0;
+    border-left: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 20px 0 50px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%);
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0s;
+  }
+
+  html[dir="rtl"] .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
     z-index: 1001;
   }
 
-  .nav-links,
-  .nav-cta-wrapper {
-    display: none;
+  .nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
   }
 
-  /* Mobile menu logic via script.js */
-  .nav-links.active {
+  .nav-menu-header {
     display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 100vh;
-    background: var(--bg-main);
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 0;
+    margin-bottom: 3rem;
   }
 
-  /* Make cta wrapper visible inside active nav-links in mobile */
-  .nav-links.active+.nav-cta-wrapper {
+  .nav-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
     display: flex;
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1002;
-    background: var(--bg-card);
-    padding: 10px;
-    border-radius: 12px;
+    align-items: center;
+    justify-content: flex-end;
+    transition: var(--transition-fast);
   }
 
+  .nav-close:hover {
+    color: var(--text-primary);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    border-radius: 12px;
+    background: transparent;
+    transition: var(--transition-fast);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-link.active {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .nav-menu-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: auto; /* Pushes to bottom */
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .btn-resume {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-social {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+
+  .nav-social a {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    transition: var(--transition-fast);
+  }
+
+  .nav-social a:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Grid */
   .bento-grid {
     grid-template-columns: 1fr;
   }
 
+  /* Footer */
   .footer-inner {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     text-align: center;
+  }
+
+  html[dir="rtl"] .footer-inner {
+    flex-direction: column;
+  }
+
+  /* Section spacing */
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: 100px;
+    min-height: auto;
+  }
+
+  .hero-container {
+    gap: 2.5rem;
+  }
+
+  .hero-desc {
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions .btn-lg {
+    padding: 0.85rem 1.8rem;
+    font-size: 0.95rem;
+  }
+
+  /* Project detail hero */
+  .project-detail-hero {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  /* Project cards */
+  .project-info {
+    padding: 2rem 1.5rem;
+  }
+
+  .project-visual {
+    padding: 2rem 1rem;
+  }
+
+  .project-name {
+    font-size: 1.6rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .project-metrics {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Contact */
+  .contact-cta-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-cta-content h2 {
+    font-size: 1.75rem;
+  }
+
+  /* SaaS Showcase */
+  .saas-showcase {
+    aspect-ratio: 4 / 3;
+    margin: 2.5rem auto 0;
+  }
+
+  .saas-controls {
+    margin-top: 1.5rem;
+  }
+
+  /* Touch targets — min 44px */
+  .saas-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .saas-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .saas-info-container {
+    margin-top: 1rem;
+    min-height: 70px;
+  }
+
+  .saas-info-title {
+    font-size: 1rem;
+  }
+
+  .saas-info-desc {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Dual column becomes single */
+  .dual-col-layout {
+    gap: 2rem;
+  }
+
+  /* Experience timeline */
+  .time-content {
+    padding: 1rem;
+  }
+
+  .time-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  html[dir="rtl"] .time-header {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  /* Philosophy */
+  .phil-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  html[dir="rtl"] .phil-item {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  /* Bento items */
+  .bento-item {
+    padding: 1.5rem;
+  }
+
+  /* Code editor */
+  .hero-code-editor .editor-body pre {
+    font-size: 0.8rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* ---- Small Mobile (max-width: 480px) ---- */
+@media screen and (max-width: 480px) {
+  /* Container */
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    width: 95%;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Section */
+  .section {
+    padding: 48px 0;
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: 90px;
+  }
+
+  .hero-container {
+    gap: 2rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  html[dir="rtl"] .hero-actions {
+    flex-direction: column;
+  }
+
+  .status-badge {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Project detail hero */
+  .project-detail-hero {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+
+  .project-badge {
+    font-size: 0.7rem;
+  }
+
+  /* Project links stacking */
+  .project-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-links .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* SaaS Showcase */
   .saas-showcase {
-    aspect-ratio: 4 / 3;
-    margin: 3rem auto 0;
+    margin: 2rem auto 0;
+  }
+
+  .saas-card {
+    border-radius: 8px;
+  }
+
+  .saas-info-title {
+    font-size: 0.9rem;
+  }
+
+  .saas-info-desc {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  /* Contact */
+  .contact-cta-card {
+    padding: 2rem 1rem;
+  }
+
+  .contact-cta-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .social-btn {
+    padding: 0.8rem 1rem;
+    min-width: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .footer-inner {
+    gap: 0.75rem;
+  }
+
+  .footer-logo {
+    font-size: 1rem;
+  }
+
+  .footer-status {
+    font-size: 0.7rem;
+  }
+
+  /* Section titles */
+  .section-title.text-sm {
+    font-size: 1.5rem;
+  }
+
+  /* Feature list */
+  .feature-list li {
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+
+  /* Tech pills */
+  .pill {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  /* Code editor */
+  .hero-visual-wrapper {
+    max-width: 100%;
+  }
+
+  .hero-code-editor .editor-body {
+    padding: 1rem;
+  }
+
+  .hero-code-editor .editor-body pre {
+    font-size: 0.7rem;
+  }
+
+  /* Scroll-top */
+  .scroll-top {
+    bottom: 16px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+  }
+
+  html[dir="rtl"] .scroll-top {
+    right: auto;
+    left: 16px;
+  }
+
+  /* Project metrics */
+  .metric strong {
+    font-size: 1.2rem;
+  }
+
+  .metric span {
+    font-size: 0.75rem;
   }
 }
