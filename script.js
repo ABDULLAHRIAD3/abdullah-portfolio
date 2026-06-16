@@ -127,11 +127,11 @@ const translations = {
         nav_contact: "Contact",
         nav_resume: 'Resume <i class="fa-solid fa-arrow-right"></i>',
         hero_status: "Available for new opportunities",
-        hero_title: 'Building <span class="text-gradient">high-performance</span><br> digital systems.',
-        hero_desc: "I am Abdullah Riad, a Senior Software Engineer specializing in scalable architectures, modern full-stack development, and solving complex technical challenges at an enterprise level.",
+        hero_title: 'Building high-performance<br> digital systems.',
+        hero_desc: "Senior Software Engineer specializing in scalable architectures and modern full-stack development.",
         hero_cta_work: "Explore My Work",
         hero_cta_github: "GitHub Profile",
-        skills_title: 'Technical <span class="text-gradient">Expertise</span>',
+        skills_title: 'Technical Expertise',
         skills_subtitle: "A comprehensive toolkit for modern software engineering.",
         bento_frontend_title: "Web Applications",
         bento_frontend_desc: "Building highly interactive, accessible, and performant user interfaces using modern frameworks and standard web APIs.",
@@ -141,7 +141,7 @@ const translations = {
         bento_data_desc: "Structuring relational and NoSQL databases for high-availability.",
         bento_cloud_title: "Cloud & DevOps",
         bento_cloud_desc: "Automating deployments, CI/CD pipelines, and infrastructure management.",
-        projects_title: 'Featured <span class="text-gradient">Projects</span>',
+        projects_title: 'Featured Projects',
         projects_subtitle: "Selected works that showcase architectural design and technical problem-solving.",
         proj_details: "View Details",
         proj_overview: "Overview & Architecture",
@@ -228,8 +228,7 @@ const translations = {
         contact_linkedin: "LinkedIn",
         contact_github: "GitHub",
         contact_twitter: "X (Twitter)",
-        footer_credits: "Engineered with precision.",
-        footer_status: "All systems operational"
+        footer_credits: "All rights reserved."
     },
     ar: {
         nav_home: "الرئيسية",
@@ -239,11 +238,11 @@ const translations = {
         nav_contact: "تواصل معي",
         nav_resume: 'السيرة الذاتية <i class="fa-solid fa-arrow-left"></i>',
         hero_status: "متاح لفرص جديدة",
-        hero_title: 'بناء أنظمة رقمية <br> <span class="text-gradient">عالية الأداء</span>.',
-        hero_desc: "أنا عبدالله رياض، مهندس برمجيات أول متخصص في البنى البرمجية القابلة للتوسع، وتطوير الويب الحديث، وحل التحديات التقنية المعقدة على مستوى المؤسسات.",
+        hero_title: 'بناء أنظمة رقمية <br> عالية الأداء.',
+        hero_desc: "مهندس برمجيات أول متخصص في البنى البرمجية القابلة للتوسع وتطوير الويب الحديث.",
         hero_cta_work: "استكشف أعمالي",
         hero_cta_github: "حسابي على جيت هاب",
-        skills_title: 'الخبرات <span class="text-gradient">التقنية</span>',
+        skills_title: 'الخبرات التقنية',
         skills_subtitle: "مجموعة أدوات متكاملة لهندسة البرمجيات الحديثة.",
         bento_frontend_title: "تطبيقات الويب",
         bento_frontend_desc: "بناء واجهات تفاعلية وسريعة وسهلة الوصول باستخدام أحدث إطارات العمل وتقنيات الويب القياسية.",
@@ -253,7 +252,7 @@ const translations = {
         bento_data_desc: "هيكلة قواعد البيانات العلائقية وغير العلائقية بطريقة تضمن التوافر والموثوقية العالية.",
         bento_cloud_title: "السحابة والعمليات",
         bento_cloud_desc: "أتمتة النشر وخطوات التكامل المستمر (CI/CD) وإدارة البنية التحتية بكفاءة.",
-        projects_title: 'أبرز <span class="text-gradient">المشاريع</span>',
+        projects_title: 'أبرز المشاريع',
         projects_subtitle: "أعمال مختارة توضح جودة التصميم المعماري والقدرة على حل المشكلات التقنية الصعبة.",
         proj_details: "عرض التفاصيل",
         proj_overview: "نظرة عامة والهيكل",
@@ -340,8 +339,7 @@ const translations = {
         contact_linkedin: "لينكد إن (LinkedIn)",
         contact_github: "جيت هاب (GitHub)",
         contact_twitter: "إكس (X)",
-        footer_credits: "صُنع بدقة وإتقان.",
-        footer_status: "جميع الأنظمة تعمل بكفاءة"
+        footer_credits: "جميع الحقوق محفوظة."
     }
 };
 
