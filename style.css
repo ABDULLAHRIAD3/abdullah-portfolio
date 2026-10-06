@@ -48,6 +48,296 @@ html[dir="rtl"] .project-feature-card {
   /* keep the grid structural dir ltr so images are on the right/left cleanly, or handle it via rtl natively */
 }
 
+/* ========================================
+   LIGHT THEME
+   ======================================== */
+[data-theme="light"] {
+  --bg-main: #f8f9fb;
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg-card-hover: rgba(255, 255, 255, 0.9);
+
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+
+  --accent: #059669;
+  --accent-subtle: rgba(5, 150, 105, 0.08);
+  --accent-border: rgba(5, 150, 105, 0.2);
+
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-focus: rgba(5, 150, 105, 0.4);
+}
+
+/* Light theme — Navbar */
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Light theme — Background effects */
+[data-theme="light"] .bg-grid {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+[data-theme="light"] .bg-glow {
+  opacity: 0.06;
+}
+
+/* Light theme — Glass panels */
+[data-theme="light"] .glass-panel-strong {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .glass-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* Light theme — Buttons */
+[data-theme="light"] .btn-primary {
+  background: var(--text-primary);
+  color: var(--bg-main);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background: #1f2937;
+}
+
+[data-theme="light"] .btn-glass {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .btn-glass:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .btn-nav {
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .btn-nav:hover {
+  background: var(--text-primary);
+  color: var(--bg-main);
+}
+
+/* Light theme — Code editor */
+[data-theme="light"] .editor-header {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .editor-body {
+  background: #1e1e2e;
+  color: #f0f0f5;
+}
+
+[data-theme="light"] .editor-body pre {
+  color: #f0f0f5;
+}
+
+/* Light theme — Tech strip */
+[data-theme="light"] .tech-strip {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Light theme — Pills and badges */
+[data-theme="light"] .pill {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .bento-icon {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .date-badge {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Light theme — Project visuals */
+[data-theme="light"] .project-visual {
+  background: rgba(5, 150, 105, 0.04);
+}
+
+[data-theme="light"] .project-full-card .project-visual {
+  background: rgba(5, 150, 105, 0.03);
+}
+
+[data-theme="light"] .project-screenshot {
+  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.12);
+}
+
+/* Light theme — Mockups */
+[data-theme="light"] .browser-mockup,
+[data-theme="light"] .terminal-mockup {
+  background: #1e1e2e;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .browser-header,
+[data-theme="light"] .terminal-header {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Light theme — Timeline */
+[data-theme="light"] .time-marker {
+  background: var(--bg-main);
+}
+
+[data-theme="light"] .time-content {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Light theme — Philosophy icons */
+[data-theme="light"] .phil-icon {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Light theme — Social buttons */
+[data-theme="light"] .social-btn {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .social-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Light theme — Footer */
+[data-theme="light"] .elite-footer {
+  background: var(--bg-main);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Light theme — Scroll-top */
+[data-theme="light"] .scroll-top {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .scroll-top:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Light theme — SaaS showcase */
+[data-theme="light"] .saas-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .saas-card.active {
+  box-shadow: 0 25px 50px -12px rgba(5, 150, 105, 0.12);
+}
+
+[data-theme="light"] .saas-dot {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .saas-dot.active {
+  background: var(--text-primary);
+}
+
+[data-theme="light"] .saas-btn {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .saas-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Light theme — Mobile nav drawer */
+@media screen and (max-width: 768px) {
+  [data-theme="light"] .nav-menu {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(0, 0, 0, 0.06);
+    box-shadow: -16px 0 40px rgba(0, 0, 0, 0.08);
+  }
+
+  html[dir="rtl"] [data-theme="light"] .nav-menu {
+    box-shadow: 16px 0 40px rgba(0, 0, 0, 0.08);
+  }
+
+  [data-theme="light"] .nav-overlay {
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  [data-theme="light"] .nav-link:hover,
+  [data-theme="light"] .nav-link.active {
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  [data-theme="light"] .nav-menu-footer {
+    border-color: rgba(0, 0, 0, 0.06);
+  }
+
+  [data-theme="light"] .nav-social a {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-secondary);
+  }
+
+  [data-theme="light"] .nav-social a:hover {
+    background: rgba(0, 0, 0, 0.08);
+    color: var(--text-primary);
+  }
+}
+
+/* Theme toggle button animation */
+.theme-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-btn i {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="light"] .theme-btn i {
+  transform: rotate(360deg);
+}
+
+/* Smooth theme transition on all elements */
+body,
+body * {
+  transition-property: background-color, color, border-color, box-shadow, opacity;
+  transition-duration: 0s;
+}
+
+body.theme-transitioning,
+body.theme-transitioning * {
+  transition-duration: 0.4s !important;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
 /* Base resets */
 * {
   margin: 0;

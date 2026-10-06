@@ -11,6 +11,60 @@ const navLinksItems = document.querySelectorAll('.nav-link');
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 const sections = document.querySelectorAll('section');
 const langToggle = document.getElementById('langToggle');
+const themeToggle = document.getElementById('themeToggle');
+
+// 0. Theme Initialization (before any paint to prevent flash)
+function getPreferredTheme() {
+    const saved = localStorage.getItem('portfolio-theme');
+    if (saved) return saved;
+    // Respect system preference
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
+
+function applyTheme(theme, animate = false) {
+    const html = document.documentElement;
+    
+    if (animate) {
+        document.body.classList.add('theme-transitioning');
+    }
+    
+    html.setAttribute('data-theme', theme);
+    localStorage.setItem('portfolio-theme', theme);
+    
+    // Update icon
+    if (themeToggle) {
+        const icon = themeToggle.querySelector('i');
+        if (theme === 'light') {
+            icon.className = 'fa-solid fa-moon';
+        } else {
+            icon.className = 'fa-solid fa-sun';
+        }
+    }
+    
+    if (animate) {
+        setTimeout(() => {
+            document.body.classList.remove('theme-transitioning');
+        }, 500);
+    }
+}
+
+// Apply on load (no animation)
+applyTheme(getPreferredTheme(), false);
+
+// Listen for OS theme changes
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('portfolio-theme')) {
+        applyTheme(e.matches ? 'light' : 'dark', true);
+    }
+});
+
+// Theme toggle click
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        applyTheme(current === 'dark' ? 'light' : 'dark', true);
+    });
+}
 
 // 1. Sticky Navbar & Active Link
 window.addEventListener('scroll', () => {
